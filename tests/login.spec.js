@@ -7,7 +7,7 @@ const users = {
   password: 'secret_sauce'
 };
 
-test.describe('Login flow and negative scenarios', () => {
+test.describe('Task 2 - Login Flow & Negative Scenarios', () => {
   let loginPage;
   let productsPage;
 
@@ -17,27 +17,27 @@ test.describe('Login flow and negative scenarios', () => {
     await loginPage.goto();
   });
 
-  test('standard user successfully logs in', async ({ page }) => {
+  test('Happy path: standard_user successfully logs in', async ({ page }) => {
     await loginPage.login(users.standard, users.password);
     expect(page.url()).toContain('/inventory.html');
     expect(await productsPage.getTitleText()).toBe('Products');
   });
 
-  test('bad password shows an error message', async () => {
+  test('Invalid credentials: bad password shows error message', async () => {
     await loginPage.login(users.standard, 'wrong_password');
     expect(await loginPage.getErrorMessage()).toContain(
       'Epic sadface: Username and password do not match any user in this service'
     );
   });
 
-  test('blank form shows a required username error', async () => {
+  test('Empty fields: submitting blank form shows error message', async () => {
     await loginPage.login('', '');
     expect(await loginPage.getErrorMessage()).toContain(
       'Epic sadface: Username is required'
     );
   });
 
-  test('logout returns the user to the login page', async () => {
+  test('Logout flow: verify user returns to login page', async () => {
     await loginPage.login(users.standard, users.password);
     await productsPage.logout();
     expect(loginPage.page.url()).toBe('https://www.saucedemo.com/');
