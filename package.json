@@ -12,5 +12,17 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.63.0"
-  }
+  },
+  "dependencies": {
+    "playwright": "^1.63.0",
+    "playwright-core": "^1.63.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oshi2000/QA-assignment-Newnop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Oshi2000/QA-assignment-Newnop/issues"
+  },
+  "homepage": "https://github.com/Oshi2000/QA-assignment-Newnop#readme"
 }
