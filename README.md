@@ -6,14 +6,14 @@ Playwright test automation project for [SauceDemo](https://www.saucedemo.com), i
 
 ```text
 QA Assignment/
-+-- BONUS/
++-- Task5/
 |   `-- api.spec.js             # ReqRes API tests
-+-- Pages/
++-- Task2/
 |   |-- CartPage.js             # Cart page object
 |   |-- CheckoutPage.js         # Checkout page object
 |   |-- LoginPage.js            # Login page object
 |   `-- ProductsPage.js         # Products page object
-+-- tests/
++-- Task_3/
 |   |-- e2e.spec.js             # End-to-end purchase flow
 |   `-- login.spec.js           # Login and negative scenarios
 +-- BUG_REPORT.md               # SauceDemo problem_user findings
@@ -44,19 +44,19 @@ npx playwright test
 Run the login tests:
 
 ```bash
-npx playwright test tests/login.spec.js
+npx playwright test Task_3/login.spec.js
 ```
 
 Run the end-to-end purchase test:
 
 ```bash
-npx playwright test tests/e2e.spec.js
+npx playwright test Task_3/e2e.spec.js
 ```
 
-Run the BONUS API tests:
+Run the Task5 API tests:
 
 ```bash
-npx playwright test BONUS/api.spec.js
+npx playwright test Task5/api.spec.js
 ```
 
 List discovered tests without executing them:
@@ -83,7 +83,7 @@ npx playwright test --list
 - Verify the order summary
 - Complete the order and verify confirmation
 
-### BONUS API Tests
+### Task5 API Tests
 
 The API suite uses ReqRes and covers:
 
