@@ -28,7 +28,7 @@ The `Task_3_Tests` folder contains the automated SauceDemo browser tests:
 
 ### Task 4: Bug Report
 
-`BUG_REPORT.md` documents defects observed with the SauceDemo `problem_user` account. Each finding includes severity, affected component, reproduction steps, expected behavior, and actual behavior.
+`Task_4_BUG_REPORT.md` documents defects observed with the SauceDemo `problem_user` account. Each finding includes severity, affected component, reproduction steps, expected behavior, and actual behavior.
 
 ### Task 5: Bonus API Tests
 
@@ -42,7 +42,7 @@ The `Task_3_Tests` folder contains the automated SauceDemo browser tests:
 
 ```text
 QA Assignment/
-|-- README.md
+|-- Task_1_README.md
 |-- Task_2_Pages/
 |   |-- CartPage.js
 |   |-- CheckoutPage.js
@@ -51,7 +51,7 @@ QA Assignment/
 |-- Task_3_Tests/
 |   |-- e2e.spec.js
 |   `-- login.spec.js
-|-- BUG_REPORT.md
+|-- Task_4_BUG_REPORT.md
 |-- Task_5_BONUS/
 |   `-- api.spec.js
 |-- package.json
@@ -145,7 +145,7 @@ The API suite uses ReqRes and covers:
 
 ### Bug Report
 
-See [BUG_REPORT.md](BUG_REPORT.md) for the documented SauceDemo issues found using the `problem_user` account.
+See [Task_4_BUG_REPORT.md](Task_4_BUG_REPORT.md) for the documented SauceDemo issues found using the `problem_user` account.
 
 ## Repository
 
