@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:task3": "playwright test Task_3_Tests",
+    "test:ui": "playwright test Task_3_Tests",
     "test:login": "playwright test Task_3_Tests/login.spec.js",
     "test:e2e": "playwright test Task_3_Tests/e2e.spec.js",
     "test:bonus": "playwright test Task_5_BONUS/api.spec.js",

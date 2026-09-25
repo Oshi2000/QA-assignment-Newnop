@@ -1,42 +1,42 @@
 # QA Assignment: Playwright Automation Suite
 
-This repository contains the completed QA assignment for [SauceDemo](https://www.saucedemo.com). It demonstrates page object model design, functional UI testing, a complete purchase journey, API testing, and exploratory bug reporting.
+This repository contains a complete QA automation assignment for [SauceDemo](https://www.saucedemo.com). It demonstrates reusable page objects, functional UI tests, an end-to-end purchase flow, exploratory bug reporting, and bonus API testing.
 
 ## Assignment Tasks
 
 ### Task 1: Project Documentation
 
-This README explains the project structure, test coverage, installation requirements, and commands an examiner can use to run the solution.
+This file explains the solution, folder structure, test coverage, prerequisites, and commands required to install and run the project.
 
 ### Task 2: Page Objects
 
-The `Task_2_Pages` folder contains reusable page object classes:
+The `Task_2_Pages` folder contains the reusable page object classes used by the UI tests:
 
-- `LoginPage.js`: login, validation errors, and logout interactions
-- `ProductsPage.js`: product selection, cart navigation, and inventory interactions
-- `CartPage.js`: cart item verification and checkout navigation
-- `CheckoutPage.js`: checkout form, order summary, and order confirmation interactions
+- `LoginPage.js`: login form, validation messages, and navigation to the login page
+- `ProductsPage.js`: product selection, cart navigation, cart badge, and logout
+- `CartPage.js`: cart item count and checkout navigation
+- `CheckoutPage.js`: checkout details, order summary, and order confirmation
 
-The page objects keep selectors and browser actions separate from test scenarios.
+Keeping selectors and browser actions in page objects makes the test scenarios easier to read and maintain.
 
 ### Task 3: UI and End-to-End Tests
 
-The `Task_3_Tests` folder contains:
+The `Task_3_Tests` folder contains the automated SauceDemo browser tests:
 
 - `login.spec.js`: successful login, invalid credentials, empty-field validation, and logout
-- `e2e.spec.js`: login, add two products, verify the cart, complete checkout, and verify the order confirmation
+- `e2e.spec.js`: login, add two products, verify the cart, complete checkout, and verify order confirmation
 
 ### Task 4: Bug Report
 
-`Task_4_BUG_REPORT.md` documents issues found while testing SauceDemo with the `problem_user` account. Each finding includes severity, affected component, reproduction steps, expected behavior, and actual behavior.
+`Task_4_BUG_REPORT.md` documents defects observed with the SauceDemo `problem_user` account. Each finding includes severity, affected component, reproduction steps, expected behavior, and actual behavior.
 
 ### Task 5: Bonus API Tests
 
 `Task_5_BONUS/api.spec.js` contains API tests against ReqRes:
 
-- `GET /api/users?page=2` returns a user list
-- `POST /api/users` creates a user
-- `POST /api/login` returns a validation error when the password is missing
+- `GET /api/users?page=2` verifies a successful user list response
+- `POST /api/users` verifies user creation
+- `POST /api/login` verifies the missing-password validation response
 
 ## Project Structure
 
@@ -73,27 +73,27 @@ npm install
 npx playwright install
 ```
 
-## Test Commands
+## Run Commands
 
-Run the complete test suite:
+Run the complete test suite (Tasks 3 and 5):
 
 ```bash
 npm test
 ```
 
-Run only Task 3 UI and end-to-end tests:
+Run only the Task 3 UI and end-to-end tests:
 
 ```bash
-npm run test:task3
+npm run test:ui
 ```
 
-Run only the login scenarios:
+Run only the login tests:
 
 ```bash
 npm run test:login
 ```
 
-Run only the end-to-end purchase flow:
+Run only the end-to-end purchase test:
 
 ```bash
 npm run test:e2e
@@ -117,11 +117,36 @@ Open the HTML report after a test run:
 npm run report
 ```
 
-The tests use SauceDemo credentials defined in the test files: `standard_user` / `secret_sauce`.
+## Test Coverage
 
-## Repository Information
+### Login Tests
 
-- Repository: [Oshi2000/QA-assignment-Newnop](https://github.com/Oshi2000/QA-assignment-Newnop)
-- Test framework: Playwright Test
-- Test target: SauceDemo
-- API target: ReqRes
+- Successful login with `standard_user`
+- Invalid password validation
+- Empty-field validation
+- Logout flow
+
+### End-to-End Purchase Test
+
+- Login to SauceDemo
+- Add two products to the cart
+- Verify cart item count
+- Complete checkout information
+- Verify the order summary
+- Complete the order and verify confirmation
+
+### Task 5 API Tests
+
+The API suite uses ReqRes and covers:
+
+- `GET /api/users?page=2`
+- `POST /api/users`
+- `POST /api/login` with a missing password
+
+### Bug Report
+
+See [Task_4_BUG_REPORT.md](Task_4_BUG_REPORT.md) for the documented SauceDemo issues found using the `problem_user` account.
+
+## Repository
+
+[GitHub: Oshi2000/QA-assignment-Newnop](https://github.com/Oshi2000/QA-assignment-Newnop)

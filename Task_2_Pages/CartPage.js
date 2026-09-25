@@ -2,11 +2,11 @@ class CartPage {
   constructor(page) {
     this.page = page;
     this.checkoutButton = '#checkout';
-    this.cartItem = '.cart_item';
+    this.cartItem = page.getByRole('button', { name: /View details for/ });
   }
 
   async getCartItemsCount() {
-    return await this.page.locator(this.cartItem).count();
+    return await this.cartItem.count();
   }
 
   async proceedToCheckout() {

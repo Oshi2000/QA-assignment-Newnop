@@ -13,8 +13,7 @@ class ProductsPage {
   }
 
   async addProductToCartByIndex(index = 0) {
-    const addToCartButtons = await this.page.$$('[id^="add-to-cart"]');
-    await addToCartButtons[index].click();
+    await this.page.locator('[id^="add-to-cart"]').nth(index).click();
   }
 
   async getCartBadgeCount() {

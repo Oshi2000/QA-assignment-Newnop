@@ -7,7 +7,7 @@ class CheckoutPage {
     this.continueButton = '#continue';
     this.finishButton = '#finish';
     this.completeHeader = '.complete-header';
-    this.summaryItems = '.cart_item';
+    this.summaryItems = page.getByRole('button', { name: /View details for/ });
   }
 
   async fillInformation(firstName, lastName, postalCode) {
@@ -18,7 +18,7 @@ class CheckoutPage {
   }
 
   async getSummaryItemsCount() {
-    return await this.page.locator(this.summaryItems).count();
+    return await this.summaryItems.count();
   }
 
   async completeOrder() {
