@@ -28,7 +28,7 @@ The `Task_3_Tests` folder contains the automated SauceDemo browser tests:
 
 ### Task 4: Bug Report
 
-`Task_4_BUG_REPORT.md` documents defects observed with the SauceDemo `problem_user` account. Each finding includes severity, affected component, reproduction steps, expected behavior, and actual behavior.
+`BUG_REPORT.md` documents defects observed with the SauceDemo `problem_user` account. Each finding includes severity, affected component, reproduction steps, expected behavior, and actual behavior.
 
 ### Task 5: Bonus API Tests
 
