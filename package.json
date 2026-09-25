@@ -1,10 +1,16 @@
 {
   "name": "qa-assignment",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright UI, end-to-end, and API tests for the SauceDemo QA assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:task3": "playwright test Task_3_Tests",
+    "test:login": "playwright test Task_3_Tests/login.spec.js",
+    "test:e2e": "playwright test Task_3_Tests/e2e.spec.js",
+    "test:bonus": "playwright test Task_5_BONUS/api.spec.js",
+    "test:list": "playwright test --list",
+    "report": "playwright show-report"
   },
   "keywords": [],
   "author": "",

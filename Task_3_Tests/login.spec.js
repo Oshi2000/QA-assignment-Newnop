@@ -1,13 +1,13 @@
 const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../Pages/LoginPage');
-const { ProductsPage } = require('../Pages/ProductsPage');
+const { LoginPage } = require('../Task_2_Pages/LoginPage');
+const { ProductsPage } = require('../Task_2_Pages/ProductsPage');
 
 const users = {
   standard: 'standard_user',
   password: 'secret_sauce'
 };
 
-test.describe('Task 2 - Login Flow & Negative Scenarios', () => {
+test.describe('Task 3 - Login Flow & Negative Scenarios', () => {
   let loginPage;
   let productsPage;
 
